@@ -71,12 +71,12 @@ GitHub Actions
 /var/www/
 ├── docker-compose.prod.yml   ← ONE file manages all 3 containers
 ├── api/
-│   ├── .env                  ← api environment variables (never in git)
+│   ├── .env                  ← api environment variables 
 │   └── uploads/              ← multer file uploads (persistent across deploys)
 ├── admin/
-│   └── .env                  ← admin environment variables (never in git)
+│   └── .env                  ← admin environment variables 
 └── client/
-    └── .env                  ← client environment variables (never in git)
+    └── .env                  ← client environment variables
 ```
 
 > **Key Rule:** No application code lives on the VPS. Only `.env` files, `uploads/`, and `docker-compose.prod.yml`. Everything else is in Docker images on Docker Hub.
